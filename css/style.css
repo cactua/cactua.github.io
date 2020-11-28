@@ -1,0 +1,271 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: url("../background.png") top center no-repeat #0d182b;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+#app {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: block;
+}
+
+.row .wrapper {
+  padding: 0px 20px;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 80px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: -40px;
+}
+
+header h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+#evidences {
+  margin: 0px -20px;
+  margin-bottom: 50px;
+}
+
+#evidences ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+#evidences ul li {
+  width: calc(100% / 6);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+  transition: opacity ease-out 0.5s, color ease-out 0.5s;
+  opacity: 1;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+#evidences ul li .li-hinner {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+
+#evidences ul li .li-hinner::after {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+}
+
+#evidences ul li .li-hinner::before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  background: url("../checked.png") center center/cover no-repeat;
+  display: block;
+  opacity: 0;
+  transition-delay: 0.1s;
+  transition-duration: 0.2s;
+}
+
+#evidences ul li.checked .li-hinner {
+  opacity: 0.5;
+}
+
+#evidences ul li.checked .li-hinner::after {
+  left: 0px;
+  width: 100%;
+}
+
+#evidences ul li.checked .li-hinner::before {
+  opacity: 1;
+}
+
+#evidences ul li.disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  color: #bb1919;
+}
+
+#evidences ul li.disabled .li-hinner::after {
+  display: none;
+}
+
+#evidences ul li.disabled.checked {
+  opacity: 1;
+  cursor: pointer;
+  color: #fff;
+}
+
+#evidences ul li.disabled.checked .li-hinner::after {
+  display: block;
+}
+
+#ghosts {
+  margin: 0px -20px;
+}
+
+#ghosts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ghosts ul li {
+  width: calc(100% / 4);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+  opacity: 1;
+  float: left;
+  text-align: center;
+  padding: 10px;
+}
+
+#ghosts ul li .li-hinner {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+#ghosts ul li.col_3 {
+  width: calc(100% / 3);
+}
+
+@media screen and (max-width: 900px) {
+  #evidences {
+    margin-bottom: 0px;
+  }
+  #evidences ul li {
+    width: calc(100% / 3);
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #ghosts ul li {
+    width: calc(100% / 3);
+  }
+  header {
+    padding-bottom: 45px;
+  }
+  header h1 {
+    font-size: 36px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #evidences {
+    margin-bottom: 0px;
+  }
+  #evidences ul li {
+    width: calc(100% / 2);
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #ghosts ul li {
+    width: calc(100% / 2);
+  }
+  #ghosts ul li.col_3 {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #evidences {
+    margin-bottom: 0px;
+  }
+  #evidences ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #evidences ul li.col_3 {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 24px;
+    margin-bottom: -30px;
+  }
+  header h2 {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="row">
+            <div class="wrapper">
+                <header>
+                    <h1>phasmophobia</h1>
+                    <h2>helper</h2>
+                </header>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="wrapper">
+                <div id="evidences">
+                    <ul>
+                        <li v-bind:class="{checked: evidences_found.indexOf(evidence.id) >= 0, disabled: possible_evidences.indexOf(evidence.id) < 0}"
+                            v-for="evidence in evidences" @click="change_evidence(evidence)">
+                            <div class="li-hinner">
+                                {{evidence.name}}
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="wrapper">
+                <div id="ghosts">
+                    <ul>
+                        <li v-for="(ghost, index) in possible_ghosts"
+                            v-bind:class="{col_3: possible_ghosts.length <= 3}">
+                            <div class="li-hinner">
+                                {{ghost.name}}
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
