@@ -46,11 +46,11 @@
             <div class="wrapper">
                 <div id="ghosts">
                     <ul class="main-ul">
-                        <li data-mh="list" v-for="(ghost, index) in possible_ghosts"
+                        <li v-for="(ghost, index) in possible_ghosts"
                             v-bind:class="{col_3: possible_ghosts.length <= 3}">
                             <div class="li-hinner">
                                 {{ghost.name}}
-                                <div class="ghost-evidences">
+                                <div class="ghost-evidences" v-show="evidences_found.length >= 2">
                                     <ul>
                                         <li v-for="id in ghost.evidences"
                                             v-bind:class="{found: evidences_found.indexOf(id) >= 0}">
