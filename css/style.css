@@ -171,13 +171,13 @@ header h2 {
   margin: 0px -20px;
 }
 
-#ghosts ul {
+#ghosts ul.main-ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#ghosts ul li {
+#ghosts ul.main-ul > li {
   width: calc(100% / 4);
   margin: 0;
   padding: 0;
@@ -195,7 +195,7 @@ header h2 {
   padding: 10px;
 }
 
-#ghosts ul li .li-hinner {
+#ghosts ul.main-ul > li .li-hinner {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 15px 3px;
@@ -203,8 +203,30 @@ header h2 {
   box-sizing: border-box;
 }
 
-#ghosts ul li.col_3 {
+#ghosts ul.main-ul > li.col_3 {
   width: calc(100% / 3);
+}
+
+#ghosts ul.main-ul > li .ghost-evidences {
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 0px 10px;
+}
+
+#ghosts ul.main-ul > li .ghost-evidences > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ghosts ul.main-ul > li .ghost-evidences > ul li {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+}
+
+#ghosts ul.main-ul > li .ghost-evidences > ul li.found {
+  color: #1f641f;
 }
 
 @media screen and (max-width: 900px) {
@@ -218,7 +240,7 @@ header h2 {
 }
 
 @media screen and (max-width: 700px) {
-  #ghosts ul li {
+  #ghosts ul.main-ul li {
     width: calc(100% / 3);
   }
   header {
@@ -241,10 +263,10 @@ header h2 {
 }
 
 @media screen and (max-width: 500px) {
-  #ghosts ul li {
+  #ghosts ul.main-ul li {
     width: calc(100% / 2);
   }
-  #ghosts ul li.col_3 {
+  #ghosts ul.main-ul li.col_3 {
     width: calc(100% / 2);
   }
 }

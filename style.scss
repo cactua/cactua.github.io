@@ -171,12 +171,12 @@ header {
 #ghosts {
     margin: 0px -20px;
 
-    ul {
+    ul.main-ul {
         list-style: none;
         margin: 0;
         padding: 0;
 
-        li {
+        > li {
             width: calc(100% / 4);
             margin: 0;
             padding: 0;
@@ -204,6 +204,26 @@ header {
             &.col_3 {
                 width: calc(100% / 3);
             }
+
+            .ghost-evidences {
+                margin-top: 10px;
+                box-sizing: border-box;
+                padding: 0px 10px;
+
+                > ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    li {
+                        width: 100%;
+                        text-align: left;
+                        font-size: 12px;
+                        &.found {
+                            color: rgb(31, 100, 31);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -220,7 +240,7 @@ header {
 }
 
 @media screen and (max-width: 700px) {
-    #ghosts ul li {
+    #ghosts ul.main-ul li {
         width: calc(100% / 3);
     }
 
@@ -246,7 +266,7 @@ header {
 }
 
 @media screen and (max-width: 500px) {
-    #ghosts ul li {
+    #ghosts ul.main-ul li {
         width: calc(100% / 2);
 
         &.col_3 {

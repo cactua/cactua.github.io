@@ -10,7 +10,9 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <title>Cactua - phasmophobia utility tool</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/matchHeight.js"></script>
+    <title>Cactua - phasmophobia utility toolg</title>
 </head>
 
 <body>
@@ -43,11 +45,19 @@
         <div class="row">
             <div class="wrapper">
                 <div id="ghosts">
-                    <ul>
-                        <li v-for="(ghost, index) in possible_ghosts"
+                    <ul class="main-ul">
+                        <li data-mh="list" v-for="(ghost, index) in possible_ghosts"
                             v-bind:class="{col_3: possible_ghosts.length <= 3}">
                             <div class="li-hinner">
                                 {{ghost.name}}
+                                <div class="ghost-evidences">
+                                    <ul>
+                                        <li v-for="id in ghost.evidences"
+                                            v-bind:class="{found: evidences_found.indexOf(id) >= 0}">
+                                            {{evidences[id].name}}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>
