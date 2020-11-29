@@ -72,6 +72,11 @@ let app = new Vue({
                 }
             }
             return return_evidences
+        },
+        set_ghost: function (ghost) {
+            this.evidences_found = JSON.parse(JSON.stringify(ghost.evidences))
+            this.possible_evidences = this.find_possible_evidences()
+            this.possible_ghosts = this.find_possible_ghosts()
         }
     }
 })

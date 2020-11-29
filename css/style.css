@@ -222,6 +222,7 @@ header h2 {
 #ghosts ul.main-ul > li .ghost-evidences > ul li {
   width: 100%;
   font-size: 12px;
+  cursor: pointer;
 }
 
 #ghosts ul.main-ul > li .ghost-evidences > ul li.found {

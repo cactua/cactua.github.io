@@ -48,7 +48,7 @@
                     <ul class="main-ul">
                         <li v-for="(ghost, index) in possible_ghosts"
                             v-bind:class="{col_3: possible_ghosts.length <= 3}">
-                            <div class="li-hinner">
+                            <div class="li-hinner" @click="set_ghost(ghost)">
                                 {{ghost.name}}
                                 <div class="ghost-evidences" v-show="evidences_found.length >= 2">
                                     <ul>

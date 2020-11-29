@@ -217,6 +217,7 @@ header {
                     li {
                         width: 100%;
                         font-size: 12px;
+                        cursor: pointer;
                         &.found {
                             color: rgb(31, 100, 31);
                         }
