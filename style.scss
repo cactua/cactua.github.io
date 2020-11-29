@@ -63,6 +63,20 @@ header {
     h2 {
         font-size: 30px;
         margin-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    input {
+        max-width: 600px;
+        background: transparent;
+        height: 70px;
+        font-family: $font;
+        text-align: center;
+        font-size: 24px;
+        border: 0;
+        outline: none;
+        color: #fff;
+        width: 100%;
     }
 }
 
@@ -247,7 +261,7 @@ header {
     }
 
     header {
-        padding-bottom: 45px;
+        padding-bottom: 25px;
     }
 
     header h1 {
