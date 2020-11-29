@@ -135,12 +135,14 @@ header h2 {
 }
 
 #evidences ul li.checked .li-hinner {
+  color: #1f641f;
   opacity: 0.5;
 }
 
 #evidences ul li.checked .li-hinner::after {
   left: 0px;
   width: 100%;
+  background-color: #1f641f;
 }
 
 #evidences ul li.checked .li-hinner::before {
@@ -193,6 +195,7 @@ header h2 {
   float: left;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 
 #ghosts ul.main-ul > li .li-hinner {
@@ -222,7 +225,6 @@ header h2 {
 #ghosts ul.main-ul > li .ghost-evidences > ul li {
   width: 100%;
   font-size: 12px;
-  cursor: pointer;
 }
 
 #ghosts ul.main-ul > li .ghost-evidences > ul li.found {

@@ -132,11 +132,13 @@ header {
 
             &.checked {
                 .li-hinner {
+                    color: rgb(31, 100, 31);
                     opacity: 0.5;
 
                     &::after {
                         left: 0px;
                         width: 100%;
+                        background-color: rgb(31, 100, 31);
                     }
 
                     &::before {
@@ -192,6 +194,7 @@ header {
             float: left;
             text-align: center;
             padding: 10px;
+            cursor: pointer;
 
             .li-hinner {
                 width: 100%;
@@ -217,7 +220,6 @@ header {
                     li {
                         width: 100%;
                         font-size: 12px;
-                        cursor: pointer;
                         &.found {
                             color: rgb(31, 100, 31);
                         }
